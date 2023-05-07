@@ -1,0 +1,663 @@
+<!DOCTYPE html>  
+
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: Ariel, sans-serif;
+			font-size: 16px;
+			background: aliceblue;		
+		}
+		.quiz-container{
+			width:80%
+			margin:0 auto;
+		}
+
+		h1{
+			text-align: center;	
+		}
+		.question{
+		width: 45%;
+		margin-bottom: 20px;
+		background: #fff;
+		padding:20px;
+		}
+		.question:nth-child(odd){
+		margin-right:5%;
+		}
+		.question p{
+		front-weight:bold;
+		}
+		.answers {
+		margin-bottom:20px;
+		}	
+		.answers label:not(:first-child) {
+		border-top:1px solid #e0e0e0;
+		}	
+		label{
+			padding: 10px 0;
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="radio"]{
+		margin-right:10px;
+		}
+		.submit-btn {
+		display:block;
+		margin-bottom:20px auto;
+		padding:10px 20px;
+		background: #4caf50;
+		color: #fff;
+		border:none;
+		border-radius: 5px;
+		font-size:18px;
+		cursor:pointer;
+		
+		}	
+			
+			
+		.result{
+		font-weight:bold;
+		font-size: 22px;
+		margin-top: 20px;
+		padding:10px;
+		background:#f2f2f2;
+		border-radius:5px;
+		text-align: center;
+		}	
+		
+	</style>
+	</head>
+<body>
+	<div class="quiz- container">
+		<h1> Vulnerability Assessment MCQ's</h1>
+	<hr>
+	<form id="quiz-form">
+		<div class="d-flex">
+		<h4 align="center"> Social Engineering Mitigation </h4>
+		<img src="assets/social_E.jpg" alt=" Socail Engineering" width="45%" height="40%" align="right">
+
+		<div class="question">
+			<p> 1.Which of the following do you think is NOT an effective social engineering mitigation strategy? </p>
+			<div class="answers">
+				<label>
+					<input type="radio" name="q1" value="a">
+				Allowing employees to use personal devices for work purposes 	
+				</label>
+				
+				<label>
+					<input type="radio" name="q1" value="b">
+				 	Implementing strict access control policies
+				</label>
+		
+				<label>
+					<input type="radio" name="q1" value="c">
+					Conducting regular employee training and awareness programs.
+				</label>
+				</div>
+				</div>
+
+<div class="question">
+			<p> 2. Which do you think is the most effective way to prevent social engineering attacks?</p>
+			<div class="answers">
+				<label>
+					<input type="radio" name="q2" value="a">
+				Conducting regular employee training and awareness programs	
+				</label>
+				
+				<label>
+					<input type="radio" name="q2" value="b">
+				sabotage a social media profile	
+				</label>
+		
+				<label>
+					<input type="radio" name="q2" value="c">
+				Using complex passwords 	
+				</label>
+				</div>
+				</div>
+
+
+<div class="question">
+			<p> 3. Which of the following is an example of a social engineering attack?</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q3" value="a">
+					A hacker stealing a password through a phishing email
+				</label>
+			
+				<label>
+					<input type="radio" name="q3" value="b">
+				 	A hacker using malware to infect a computer system
+				</label>
+				
+				<label>
+					<input type="radio" name="q3" value="c">
+				 	A hacker exploiting a vulnerability in a software application.
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+<div class="question">
+			<p> 4. Which of the following is an example of an effective social engineering mitigation strategy?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q4" value="a">
+				Requiring employees to use the same password for all their accounts
+				</label>
+			
+				<label>
+					<input type="radio" name="q4" value="b">
+					
+				</label>
+				 Conducting regular phishing simulation exercises
+				<label>
+					<input type="radio" name="q4" value="c">
+				  Virtualization	
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+<h4 align="center"> <i> Inadequate access management for third parties Questions </i></h4>
+
+<img src="assets/TPM.jpeg" alt=" Third Party Managemet" width="45%" height="40%" align="right">
+
+<div class="question">
+			<p> 5. Which of the following is NOT a mitigation strategy for inadequate access management for third parties? </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q5" value="a">
+				 Implementing two-factor authentication
+				</label>
+			
+				<label>
+					<input type="radio" name="q5" value="b">
+				Conducting regular audits of third-party access
+				</label>
+				
+				<label>
+					<input type="radio" name="q5" value="c">
+				  Allowing third-party access to all sensitive data
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+			<p> 6. What is the principle of least privilege? </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q6" value="a">
+				 Limiting access to sensitive data to only those who need it to perform their job duties
+
+				</label>
+			
+				<label>
+					<input type="radio" name="q6" value="b">
+				Allowing third-party access to all data
+				</label>
+				
+				<label>
+					<input type="radio" name="q6" value="c">
+				  Implementing a single sign-on system for all employees
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+			<p> 7.Which of the following is a recommended best practice for mitigating inadequate access management for third parties?  </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q7" value="a">
+				 Sharing login credentials with third parties
+
+				</label>
+			
+				<label>
+					<input type="radio" name="q7" value="b">
+				Providing third parties with access to all data
+				</label>
+				
+				<label>
+					<input type="radio" name="q7" value="c">
+				   Implementing strict password requirements for third parties
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+			<p> 8.What is two factor authentication?  </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q8" value="a">
+				 A system that requires two separate login credentials to access sensitive data
+
+				</label>
+				<label>
+					<input type="radio" name="q8" value="b">
+				A system that allows third parties to manage their own access permissions
+			
+				</label>
+				
+				<label>
+					<input type="radio" name="q8" value="c">
+				    A system that provides all employees with access to sensitive data
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+			<p> 9. Which of the following is a benefit of conducting regular audits of third-party access?
+ </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q9" value="a">
+				 It ensures that third parties have access to all data
+
+				</label>
+				<label>
+					<input type="radio" name="q9" value="b">
+				It allows third parties to manage their own access permissions
+			
+				</label>
+				
+				<label>
+					<input type="radio" name="q9" value="c">
+				   It helps identify and mitigate potential security risks.
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<h4 align="center"> <i> Mitigation strategies for Outdated and Unsupported Operating Systems </i> </h4>
+
+<img src="assets/vulsys.jpg" alt="Outdated and Unsupported Operating Systems " width="45%" height="40%" align="right">
+<div class="question">
+
+			<p> 10. What is the best way to mitigate security risks associated with an outdated and unsupported operating system?
+ </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q10" value="a">
+				 Keep using the operating system and hope for the best
+				</label>
+				<label>
+					<input type="radio" name="q10" value="b">
+				Isolate the system from the network and restrict its use
+				</label>
+				
+				<label>
+					<input type="radio" name="q10" value="c">
+				   Upgrade to a newer, supported operating system
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+
+			<p> 11. Which of the following is a potential risk of using an outdated and unsupported operating system?
+ </p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q11" value="a">
+				  No risk - outdated systems are no longer a target for attackers
+				</label>
+				<label>
+					<input type="radio" name="q11" value="b">
+				Reduced performance and stability of the system
+				</label>
+				
+				<label>
+					<input type="radio" name="q11" value="c">
+				  Increased security vulnerabilities and exposure to cyber threats
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+
+
+		<div class="question">
+
+			<p> 12. Which  mitigation strategy is most effective for reducing the risk of cyber threats associated with an outdated and unsupported operating system?
+ 			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q12" value="a">
+				   Implementing regular vulnerability scans and security patches
+				</label>
+				<label>
+					<input type="radio" name="q12" value="b">
+				 Running the system in a virtualised environment
+				</label>
+				
+				<label>
+					<input type="radio" name="q12" value="c">
+				  Removing the operating system from the network
+				</label>
+	
+			</p>
+
+		</div>
+		</div>
+
+<div class="question">
+			<p> 13. What is the primary benefit of using a virtualized environment to run an outdated and unsupported operating system?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q13" value="a">
+				 Increased performance and stability of the system
+				</label>
+			
+				<label>
+					<input type="radio" name="q13" value="b">
+					Improved compatibility with newer hardware and software
+				</label>
+				 
+				<label>
+					<input type="radio" name="q13" value="c">
+				  	Reduced risk of security vulnerabilities and exposure to cyber threats
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+<div class="question">
+<p> 14. Which of the following is a limitation of mitigation strategies for outdated and unsupported operating systems?
+
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q14" value="a">
+				They are too expensive to implement.
+				</label>
+			
+				<label>
+					<input type="radio" name="q14" value="b">
+					They cannot guarantee 100% protection against all cyber threats
+				</label>
+				 
+				<label>
+					<input type="radio" name="q14" value="c">
+				  They are only effective for certain types of systems
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+
+
+<h4 align="center">  Malware-based attack mitigation strategies</h4>
+
+<img src="assets/malware.jpeg" alt="Malware Based" width="45%" height="40%" align="right">
+
+<div class="question">
+			<p> 15. What is one common strategy for mitigating the risk of malware-based attacks?
+
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q15" value="a">
+				Installing antivirus software
+				</label>
+			
+				<label>
+					<input type="radio" name="q15" value="b">
+					Running regular data backups
+				</label>
+				 
+				<label>
+					<input type="radio" name="q15" value="c">
+				  All of the above
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+
+<div class="question">
+			<p> 16. Which of the following is an effective way to prevent malware from spreading within a network?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q16" value="a">
+				 Isolating infected devices from the network.
+				</label>
+			
+				<label>
+					<input type="radio" name="q16" value="b">
+					Installing firewalls on every device in the network
+				</label>
+				 
+				<label>
+					<input type="radio" name="q16" value="c">
+				  	Running regular software updates on all devices in the network
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+<div class="question">
+			<p> 17.  What is the primary purpose of a sandbox environment when it comes to malware-based attacks?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q17" value="a">
+				 To simulate a real-world computing environment
+				</label>
+			
+				<label>
+					<input type="radio" name="q17" value="b">
+					To detect and analyze malware without risking damage to the network
+				</label>
+				 
+				<label>
+					<input type="radio" name="q17" value="c">
+				  	 To provide a secure space for employees to test new software
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+<div class="question">
+			<p> 18. What is a common technique used by cyber criminals to spread malware??
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q18" value="a">
+				Social Engineering
+				</label>
+			
+				<label>
+					<input type="radio" name="q18" value="b">
+					Encryption
+				</label>
+				 
+				<label>
+					<input type="radio" name="q18" value="c">
+				  Two factor Authentication 	
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+
+<div class="question">
+			<p> 19. Which of the following is NOT an effective way to mitigate the risk of malware-based attacks?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q19" value="a">
+				Running regular software updates on all devices in the network
+				</label>
+			
+				<label>
+					<input type="radio" name="q19" value="b">
+					 Installing firewalls on every device in the network
+				</label>
+				 
+				<label>
+					<input type="radio" name="q19" value="c">
+				  Allowing employees to use personal devices for work purposes 	
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+
+<h4 align="center"> Brute force attack mitigation strategies </h4>
+
+<img src="assets/bforce.jpeg" alt="Brute-Force" width="35%" height="30%" align="right">
+
+<div class="question">
+			<p> 20. Which of the following is NOT a recommended mitigation strategy for brute force attacks?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q20" value="a">
+				Disabling all security measures to reduce complexity
+				</label>
+			
+				<label>
+					<input type="radio" name="q20" value="b">
+					Implementing a rate limiting mechanism
+				</label>
+				 
+				<label>
+					<input type="radio" name="q20" value="c">
+				  	Implementing a strong password policy
+				</label>
+	
+			</p>
+		</div>
+		</div>
+<div class="question">
+			<p> 21. Which of the following is a recommended mitigation strategy for brute force attacks?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q21" value="a">
+				 Allowing unlimited login attempts
+				</label>
+			
+				<label>
+					<input type="radio" name="q21" value="b">
+					Using easily guessable passwords
+				</label>
+				 
+				<label>
+					<input type="radio" name="q21" value="c">
+				  	 Implementing account lockout policies
+				</label>
+	
+			</p>
+		</div>
+		</div>
+<div class="question">
+			<p> 22. Which of the following is a recommended mitigation strategy for brute force attacks targeting remote desktop services?
+			</p>
+			<div class="answers">
+
+				<label>
+					<input type="radio" name="q22" value="a">
+				Implementing a strong password policy
+			
+				<label>
+					<input type="radio" name="q22" value="b">
+					Changing the default port used by remote desktop services
+				</label>
+				 
+				<label>
+					<input type="radio" name="q22" value="c">
+				  	Allowing remote desktop services to be accessed from any IP address
+				</label>
+	
+			</p>
+		</div>
+		</div>
+
+
+
+		<button type="submit" class="submit-btn"> Submit</button>
+	</form>
+
+
+
+		<div class="result" id="result"></div>
+	</div>
+	<script type="text/javascript">
+		const quizForm = document.getElementById('quiz-form');
+		const resultDiv = document.getElementById('result');
+		const correctAnswers = ['a','a','a','b','a','c','c','a','c','c','c','a','c','b','c','a','b','a','c','a','c','b'];
+		
+		quizForm.addEventListener('submit', e=>{
+			e.preventDefault();
+			
+			let score=0;
+			const userAnswers = [quizForm.q1.value,quizForm.q2.value,quizForm.q3.value,quizForm.q4.value,quizForm.q5.value,quizForm.q6.value,quizForm.q7.value,quizForm.q8.value,quizForm.q9.value,quizForm.q10.value,quizForm.q11.value,quizForm.q12.value,quizForm.q13.value,quizForm.q14.value,quizForm.q15.value,quizForm.q16.value,quizForm.q17.value,quizForm.q18.value,quizForm.q19.value,quizForm.q20.value,quizForm.q21.value,quizForm.q22.value]
+			userAnswers.forEach((answer,index) =>{
+			if(answer === correctAnswers[index]){ 
+				score += 1;
+			}
+		});
+		
+		resultDiv.innerHTML = `YOUR SCORE IS ${score}/${correctAnswers.length}`;
+	
+		});
+	</script>
+	<a href ="Finished page.html" target="Finished" align="right" style="color:red"> Click me for answers</a><br> 
+</body>
+</html>

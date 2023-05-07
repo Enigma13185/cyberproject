@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web-Based Game</title>
+	 <style>
+	 	body{
+	 		background-image: url('1.avif');
+	 	}
+    	.main_form {
+ 			background-color: #ffffff;
+ 			width: 500px;
+ 			padding: 20px;
+ 			border-radius: 5px;
+ 			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+ 			margin: 20px auto;
+}
+
+		label {
+  			display: inline-block;
+  			width: 100px;
+  			margin-bottom: 10px;
+}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="date"],
+		select {
+  			padding: 8px;
+  			border-radius: 5px;
+  			border: solid 1px black;
+  			margin-bottom: 20px;
+ 			width: 100%;
+  			box-sizing: border-box;
+}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="date"]:focus,
+		select:focus {
+  			outline: none;
+  			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+		input[type="number"] {
+  			padding: 8px;
+  			border-radius: 5px;
+ 			border: none;
+ 			margin-bottom: 20px;
+ 			width: 100%;
+  			box-sizing: border-box;
+  			background-color: #f2f2f2;
+}
+
+		button {
+ 			background-color: #4CAF50;
+  			border: none;
+  			color: white;
+  			padding: 10px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 16px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+  			border-radius: 5px;
+  			width: 100%;
+  			box-sizing: border-box;
+  			transition: background-color 0.3s ease;
+}
+
+
+		button:disabled{
+  			color: gray;
+  			cursor: auto;
+ 	 		background-color: #ddd;
+ 			background: #ddd;
+}
+
+
+		button:hover {
+ 	 		background-color: #3e8e41;
+}
+
+
+		#play-area {
+ 			background-color: #ffffff;
+  			width: 90%;
+  			padding: 20px;
+  			border-radius: 5px;
+  			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  			margin-bottom: 20px;
+  			min-height: 100px;
+}
+
+		#answer-input {
+  			padding: 8px;
+  			border-radius: 5px;
+  			border: none;
+  			margin-bottom: 20px;
+  			width: 100%;
+  			box-sizing: border-box;
+}
+
+  </style>
+</head>
+<body>
+	<p> Welcome to our online training quiz to assist with cyber-training. It will help both you and your colleagues in becoming more familiar with cyber security and secure online operations. It is more crucial than ever to be cautious and knowledgeable about the most recent hazards and the best practices for securing confidential data in the modern digital age since cyber threats are growing more widespread and powerful.<br><br><br> 
+
+	The quiz will address issues including social engineering, brute force attacks, malware-based attacks, outdated and unsupported operating systems, and inadequate access management for third parties.  These modules are made to be interesting, interactive, and simple to understand so that you may rapidly pick up the knowledge you need to defend your company against cyberattacks.<br><br><br>
+
+	Our platform offers the support you need to keep informed and up-to-date on the most recent threats and best practices, regardless of whether you are an experienced IT expert or are new to the field of cyber security. Why then wait? <br><br>
+
+	Register now to begin securing a brighter future for your business.<br>
+
+</p> </br>
+		
+
+
+<h3 style="color:orange;" align="center" > READY FOR SOME FUN? </h3>
+
+
+
+	<form class="main_form">
+		<label for="alias">Enter Alias:</label>
+		<input type="text" id="alias" name="alias" minlength="3" required><br><br>
+
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender" required>
+			<option value="">Select</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select><br><br>
+
+		<label for="email">Email Address:</label>
+		<input type="email" id="email" name="email"><br><br>
+
+    <button type="button" id="register-btn" onclick="Register()">Register</button>
+    
+    <button id="start-btn" type="button" onclick="PlayGame()" disabled>Start</button>
+    <div id="play-area" disabled></div>
+
+    <input id="answer-input" type="text" placeholder="Enter your answer" disabled>
+    <button id="accept-button" type="button" onclick="CheckAnswer()" disabled>Accept </button>
+    <button id="next-button" type="button" onclick="PlayGame()" disabled>Next</button>
+    <button type="button" onclick="findPercentageScore();" id="endBtn" disabled>End</button>
+
+    <textarea id="showpercentage" rows="10" cols="50"></textarea>
+    <textarea id="showallplayers" rows="10" cols="50"></textarea>
+
+    <button type="button" id="percentage-button" onclick="findPercentageScore()" disabled>Calculate Percentage Score</button>
+
+	</form>
+
+	<script>
+	// Define global array to hold player data
+  	var PlayersData = [];
+
+  	function Register() {
+    // Get form fields by ID
+    var alias = document.getElementById("alias");
+    var gender = document.getElementById("gender");
+    var email = document.getElementById("email");
+
+    // Validate fields
+    if (alias.value.length < 3) {
+      alert("Alias should be least 3 characters long.");
+      alias.focus();
+      return false;
+    }
+
+    if (gender.value == "") {
+      alert("Please select your gender.");
+      gender.focus();
+      return false;
+    }
+
+    // Append validated data to global array
+    PlayersData.push({
+      alias: alias.value,
+      gender: gender.value,
+      email: email.value,
+      results: []
+    });
+
+
+    alert("Registration successful!");
+
+     // Disable all form fields after registration
+    alias.disabled = true;
+    gender.disabled = true;
+    email.disabled = true;
+
+    document.getElementById("register-btn").disabled = true;
+
+    // Enable End and Start buttons
+    document.getElementById("endBtn").disabled = false;
+    document.getElementById("start-btn").disabled = false;
+    document.getElementById("percentage-button").disabled = false;
+
+    return true;
+  }
+
+  
+  	</script>
+
+  	<style type="text/css">
+    .btn-disable
+        {
+        cursor: not-allowed;
+        pointer-events: none;
+
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+        background-color: #ffffff;
+
+        }
+	</style>
+
+ 
+</body>
+</html>
